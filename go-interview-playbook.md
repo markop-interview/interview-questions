@@ -22,7 +22,7 @@ Pripremajte se ovim redosledom: osnove → `slices` i `maps` → `concurrency` �
 
 Svako dodeljivanje pravi kopiju. Kod skalarnih tipova — `int`, `string`, `struct` — kopira se sama vrednost. Kod `slices`, `maps`, `channels` i pokazivača kopira se zaglavlje ili pokazivač (kod `slice`-a: pokazivač plus `len` i `cap`), tako da obe kopije upućuju na iste osnovne podatke. To je suština deljenja referenci (*aliasing*) u jednoj rečenici. Ako vam je potrebna duboka kopija (*deep copy*), morate je napraviti sami.
 
-$\color{red}{\textsf{⚠️ Napomena: string i struct nisu skalarni tipovi. Kopiranje string vrednosti kopira zaglavlje (pokazivač + dužina) i deli iste bajtove, što je bezbedno jer su stringovi nepromenljivi. Kopiranje struct-a kopira sva polja, a polja tipa slice, map, pokazivač ili interface i dalje dele iste podatke.}}$
+> ⚠️ Napomena: string i struct nisu skalarni tipovi. Kopiranje string vrednosti kopira zaglavlje (pokazivač + dužina) i deli iste bajtove, što je bezbedno jer su stringovi nepromenljivi. Kopiranje struct-a kopira sva polja, a polja tipa slice, map, pokazivač ili interface i dalje dele iste podatke.}}$
 
 ## Q2. Koje su nulte vrednosti (*zero values*) u Go-u i zašto su važne?
 
